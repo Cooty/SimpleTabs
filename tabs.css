@@ -1,0 +1,33 @@
+/* Style for demo content */
+.tabs-tab h2 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: .6em;
+}
+
+.tabs-tab p {
+  font-size: 1em;
+  color: #666;
+  margint-top: 1em;
+}
+
+/* Basic layout styles for tab anchors */
+.tabs-anchor {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Styling for active tab anchor */
+.tabs-active-anchor {
+  background-color: CadetBlue;
+}
+
+/* Hide the content tabs by default */
+.tabs-tab {
+  display: none;
+}
+
+/* The one active tab will be shown */
+.tabs-active-tab {
+  display: block;
+}
