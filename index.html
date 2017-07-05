@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Tabs Example</title>
+    <!-- reset.css pulled in just to clear default user agent styles -->
+    <link rel="stylesheet" href="tabs.css">
+    <!-- basic styling for tabs -->
+    <link rel="stylesheet" href="tabs.css">
+  </head>
+  <body>
+
+    <!-- Wrapper for the whole tabset
+    Use this as root object for the Tabs module
+    classes with the prefix of "js-" are only intended
+    to be used for JS reference, don't use them for styling
+    -->
+    <article class="tabs js-tabs">
+      <!-- Container for the navigation links between tabs -->
+      <nav class="tabs-navigation">
+        <!-- The href of each element must correspond with an ID of
+         a tab element below. Order of the tabs doesn't matter and youcan have
+         as many as you want. Add "tabs-active-anchor" class statically to that
+         element that you want to show as active initially, JS will
+         switch this (also if there is an #ID in the URL) -->
+        <a class="tabs-anchor tabs-active-anchor js-anchor"
+           href="#tab-1">
+           I'm tab number one
+        </a>
+        <a class="tabs-anchor js-anchor"
+           href="#tab-2">
+           I'm tab number two
+        </a>
+        <a class="tabs-anchor js-anchor"
+           href="#tab-3">
+           I'm tab number three
+        </a>
+      </nav>
+
+      <div class="tabs-tab tabs-active-tab js-tab" id="tab-1">
+          <h2>I'm tab number one</h2>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+      <div class="tabs-tab js-tab" id="tab-2">
+          <h2>I'm tab number two</h2>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+      <div class="tabs-tab js-tab" id="tab-3">
+          <h2>I'm tab number three</h2>
+
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/DLzxrzFCyOs" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </article>
+
+    <!-- Import jQuery as dependency -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- This file contains our Tabs class, needs to be imported after jQuery and other libraries -->
+    <script type="text/javascript" src="tabs.js"></script>
+    <!-- This script block instantiates the Tabs class, you can place this code
+    anywhere as long as it's after jQuery and the code of the Tabs class -->
+    <script type="text/javascript">
+      var myTabs = new Tabs($(".js-tabs"));
+    </script>
+  </body>
+</html>
